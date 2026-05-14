@@ -4,11 +4,39 @@
 @theme {
   --color-primary: #dfe6e9;
   --color-secondary: #2d3436;
+
+  /* Surface */
+  --color-surface: #f5f7f7;
+  --color-surface-hover: #ebefef;
+  --color-border: #d5dddd;
+
+  /* Accent */
+  --color-accent: #3b82f6;
+  --color-accent-soft: #dbeafe;
+
+  /* Success */
+  --color-success: #10b981;
+  --color-success-soft: #d1fae5;
+
+  /* Muted */
+  --color-muted: #6b7280;
 }
 
 @variant dark {
   --color-primary: #2d3436;
   --color-secondary: #dfe6e9;
+
+  --color-surface: #353c3f;
+  --color-surface-hover: #3d4548;
+  --color-border: #495255;
+
+  --color-accent: #60a5fa;
+  --color-accent-soft: #1e3a5f;
+
+  --color-success: #34d399;
+  --color-success-soft: #164e3d;
+
+  --color-muted: #a1a1aa;
 }
 
 @layer base {
@@ -29,4 +57,23 @@
     color: var(--color-secondary);
     @apply transition-colors duration-300;
   }
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
 }
