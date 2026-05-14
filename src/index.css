@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #dfe6e9;
+  --color-secondary: #2d3436;
+}
+
+@variant dark {
+  --color-primary: #2d3436;
+  --color-secondary: #dfe6e9;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    @apply transition-colors duration-300;
+  }
+}
