@@ -12,6 +12,18 @@
 }
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  html {
+    color-scheme: light dark;
+  }
+
   body {
     background-color: var(--color-primary);
     color: var(--color-secondary);
