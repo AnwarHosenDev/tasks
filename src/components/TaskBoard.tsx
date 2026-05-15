@@ -63,7 +63,7 @@ export default function TaskBoard() {
 
   return (
     // Task Board Container
-    <div className="relative mx-auto w-full max-w-lg h-dvh bg-primary flex flex-col overflow-hidden">
+    <div className="relative mx-auto w-full max-w-lg h-full bg-primary flex flex-col overflow-hidden">
       {/* Task Header */}
       <TaskHeader
         theme={theme}

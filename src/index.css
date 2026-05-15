@@ -81,3 +81,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
 }
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}

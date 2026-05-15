@@ -64,14 +64,9 @@ export function TaskInput({
       {/* Input Card */}
       <div
         className={`
-          absolute bottom-0 left-0 right-0
-          mx-auto w-full max-w-lg
-
+          absolute bottom-0 left-0 right-0 mx-auto w-full max-w-lg
           rounded-t-3xl border-t border-border bg-primary
-
-          px-4 py-4 space-y-3
-
-          transition-transform duration-300 ease-out
+          px-4 py-4 space-y-3 transition-transform duration-300 ease-out
           ${openInputCard ? "translate-y-0" : "translate-y-full"}
         `}
       >
@@ -81,13 +76,14 @@ export function TaskInput({
 
         {/* Title Input */}
         <input
+          type="text"
           ref={titleFieldRef}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Task title"
           className="
             w-full rounded-2xl bg-surface
-            px-4 py-3 text-sm outline-none
+            px-4 py-3 text-[16px] font-semibold tracking-wider outline-none
           "
           onKeyDown={(e) => {
             if (e.key === "Enter") handleSubmit();
@@ -102,7 +98,7 @@ export function TaskInput({
           rows={4}
           className="
             w-full resize-none rounded-2xl bg-surface
-            px-4 py-3 text-sm outline-none
+            px-4 py-3 text-[16px] tracking-wider outline-none
           "
         />
 
