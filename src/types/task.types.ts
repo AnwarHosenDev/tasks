@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export type TaskStatus = "Pending" | "In Progress" | "Completed";
 
 export interface TaskType {
@@ -7,9 +9,16 @@ export interface TaskType {
   status: TaskStatus;
 }
 
-export type TaskFilter = "All" | "Pending" | "In Progress";
+export type TaskFilter = "All" | TaskStatus;
 
-export interface TaskProps {
+export interface TaskItemProps {
   task: TaskType;
-  onUpdateStatus: (id: number, status: TaskStatus) => void;
+  onUpdateStatus: (id: number, s: TaskStatus) => void;
+  onDelete: (id: number) => void;
+  onEdit: (task: TaskType) => void;
 }
+
+export type StatusConfig = Record<
+  TaskStatus,
+  { action: TaskStatus; icon: LucideIcon }
+>;
