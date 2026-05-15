@@ -28,3 +28,10 @@ export interface UseTaskProps {
   setTasks: React.Dispatch<React.SetStateAction<TaskType[]>>;
   activeFilter: TaskFilter;
 }
+
+export interface TaskInputProps {
+  openInputCard: boolean;
+  onClose: () => void;
+  onSubmit: (title: string, desc: string) => void;
+  editingTask: TaskType | null;
+}
