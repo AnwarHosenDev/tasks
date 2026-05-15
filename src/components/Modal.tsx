@@ -1,4 +1,4 @@
-import type { ModalProps } from "@/types";
+import type { ModalProps } from "@/types/modal.types";
 import { useEffect } from "react";
 import { X } from "lucide-react";
 

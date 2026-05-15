@@ -57,6 +57,10 @@
     color: var(--color-secondary);
     @apply transition-colors duration-300;
   }
+
+  button {
+    cursor: pointer;
+  }
 }
 
 /* Thin scrollbar */
