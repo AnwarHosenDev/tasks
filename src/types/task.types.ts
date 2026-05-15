@@ -22,3 +22,9 @@ export type StatusConfig = Record<
   TaskStatus,
   { action: TaskStatus; icon: LucideIcon }
 >;
+
+export interface UseTaskProps {
+  tasks: TaskType[];
+  setTasks: React.Dispatch<React.SetStateAction<TaskType[]>>;
+  activeFilter: TaskFilter;
+}
