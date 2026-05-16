@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Drawer } from "@/components/Drawer";
 import type { TaskInputProps } from "@/types/task.types";
 
 export function TaskInput({
@@ -36,40 +37,20 @@ export function TaskInput({
     if (!title.trim()) return;
 
     onSubmit(title, desc);
-
     setTitle("");
     setDesc("");
     onClose();
   };
 
   return (
-    // Overlay and Sheet Container
-    <div
-      className={`
-        fixed inset-0 z-50
-        transition-all duration-300
-        ${openInputCard ? "pointer-events-auto" : "pointer-events-none"}
-      `}
+    <Drawer
+      isOpen={openInputCard}
+      onClose={onClose}
+      position="bottom"
+      width="max-w-lg"
+      className="rounded-t-3xl"
     >
-      {/* Overlay */}
-      <div
-        onClick={onClose}
-        className={`
-          absolute inset-0 bg-black/40 backdrop-blur-[2px]
-          transition-opacity duration-300
-          ${openInputCard ? "opacity-100" : "opacity-0"}
-        `}
-      />
-
-      {/* Input Card */}
-      <div
-        className={`
-          absolute bottom-0 left-0 right-0 mx-auto w-full max-w-lg
-          rounded-t-3xl border-t border-border bg-primary
-          px-4 py-4 space-y-3 transition-transform duration-300 ease-out
-          ${openInputCard ? "translate-y-0" : "translate-y-full"}
-        `}
-      >
+      <div className="rounded-t-3xl border-t border-border bg-primary px-4 py-8 space-y-3">
         <div className="text-sm font-semibold text-secondary">
           {editingTask ? "Edit Task" : "New Task"}
         </div>
@@ -106,10 +87,7 @@ export function TaskInput({
         <div className="flex gap-2 pt-1">
           <button
             onClick={onClose}
-            className="
-              flex-1 rounded-2xl bg-surface py-3 text-sm
-              active:scale-[0.98] transition
-            "
+            className="flex-1 rounded-2xl bg-surface py-3 text-sm"
           >
             Cancel
           </button>
@@ -118,14 +96,13 @@ export function TaskInput({
             onClick={handleSubmit}
             className="
               flex-1 rounded-2xl bg-secondary text-primary
-              py-3 text-sm font-medium
-              active:scale-[0.98] transition
+              py-3 text-sm font-medium active:scale-[0.98] transition
             "
           >
             {editingTask ? "Save" : "Add"}
           </button>
         </div>
       </div>
-    </div>
+    </Drawer>
   );
 }
