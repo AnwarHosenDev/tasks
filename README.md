@@ -28,22 +28,21 @@ Tasks helps you quickly capture, organize, and track your daily work without ads
 
 ---
 
-## 🛠 Tech Stack
+# 📱 Download Android App
 
-- React
-- TypeScript
-- TailwindCSS
-- Vite
-- Capacitor
-- Lucide Icons
+Get the latest Android build of the app below.
 
-# 🚀 Installation
+🚀 Latest Release (Recommended)
 
-## 📱 Download Mobile App
+👉 Direct link:
+https://github.com/AnwarHosenDev/tasks/releases/latest
 
-The Android-ready version of the app is available in the `android` branch.
+📦 Alternative: Android Source Branch
 
-👉 Android branch: https://github.com/AnwarHosenDev/tasks/tree/android
+If you want to build or inspect the Capacitor Android project:
+
+👉 Android branch:
+https://github.com/AnwarHosenDev/tasks/tree/android
 
 ---
 
@@ -118,6 +117,19 @@ src/
 ├── utils/
 └── App.tsx
 ```
+
+---
+
+## 🛠 Tech Stack
+
+- React
+- TypeScript
+- TailwindCSS
+- Vite
+- Capacitor
+- Lucide Icons
+
+# 🚀 Installation
 
 ---
 
