@@ -88,7 +88,7 @@ export default function TaskBoard() {
       <button
         onClick={() => setOpenInput(true)}
         className="
-          absolute bottom-20 right-6
+          absolute bottom-13 right-0 left-0 mx-auto
           h-12 w-12 rounded-full
           bg-secondary text-primary
           flex items-center justify-center
