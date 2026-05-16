@@ -18,31 +18,32 @@ export function TaskCompletedDrawer({
     <div className="absolute bottom-0 left-0 right-0 border-t border-border bg-primary/95 backdrop-blur-xl">
       {/* HEADER */}
       <div className="flex items-center justify-between px-4 py-3">
+        {/* Clear All Completed Tasks */}
+        <button
+          onClick={onClear}
+          className="text-sm text-muted active:scale-95 transition"
+        >
+          Clear all
+        </button>
+
         {/* Toggle Completed Tasks */}
         <button
           onClick={() => setShow(!show)}
-          className="flex items-center gap-2 active:scale-[0.98] transition"
+          className="flex items-center gap-3 active:scale-[0.98] transition"
         >
-          <span className="text-sm font-medium text-secondary">Completed</span>
+          <span className="text-sm font-medium text-secondary flex items-center gap-1">
+            Completed
+            <ChevronUp
+              size={16}
+              className={`transition-transform duration-300 ${
+                show ? "rotate-180" : ""
+              }`}
+            />
+          </span>
 
           <span className="rounded-full bg-surface px-2 py-0.5 text-xs text-muted">
             {completedTasks.length}
           </span>
-
-          <ChevronUp
-            size={16}
-            className={`transition-transform duration-300 ${
-              show ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-
-        {/* Clear All Completed Tasks */}
-        <button
-          onClick={onClear}
-          className="text-xs text-muted active:scale-95 transition"
-        >
-          Clear all
         </button>
       </div>
 

@@ -1,13 +1,7 @@
 import { X, Moon, Sun, BookOpen, GitBranch } from "lucide-react";
 import { Drawer } from "@/components/Drawer";
 import type { AppDrawerProps, SidebarItem } from "@/types/appDrawer.types";
-import {
-  APP_NAME,
-  APP_VERSION,
-  GITHUB_PROFILE,
-  GITHUB_REPO,
-  LICENCE,
-} from "@/constants";
+import { APP_VERSION, GITHUB_PROFILE, GITHUB_REPO, LICENCE } from "@/constants";
 
 export function AppDrawer({
   open,
@@ -31,41 +25,42 @@ export function AppDrawer({
     <Drawer isOpen={open} onClose={onClose} position="right" width="w-60">
       <div className="h-full flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-border">
-          <h2 className="font-semibold text-secondary">{APP_NAME}</h2>
+        <div className="flex items-center justify-between p-6 border-b border-border">
+          <h2 className="text-lg font-semibold text-secondary">Menu</h2>
           <button onClick={onClose}>
-            <X size={18} />
+            <X size={20} />
           </button>
         </div>
 
         {/* Body */}
-        <div className="flex-1 p-4 space-y-6">
+        <div className="flex-1 p-6 space-y-8">
           {/* Sidebar items */}
-          <button
-            onClick={toggleTheme}
-            className="flex items-center gap-2 text-sm text-secondary"
-          >
-            {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
-            {theme === "dark" ? "Light Theme" : "Dark Theme"}
-          </button>
-
           {sidebarItem.map((item, index) => {
             return (
               <a
                 key={index}
                 href={item.link}
                 target="_blank"
-                className="flex items-center gap-2 text-sm text-secondary hover:underline"
+                className="flex items-center gap-2 text-[16px] text-secondary hover:underline"
               >
                 <item.icon size={14} />
                 {item.label}
               </a>
             );
           })}
+
+          {/* Toggle Theme Button */}
+          <button
+            onClick={toggleTheme}
+            className="flex items-center gap-2 text-[16px] text-secondary"
+          >
+            {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
+            {theme === "dark" ? "Light Theme" : "Dark Theme"}
+          </button>
         </div>
 
         {/* Footer */}
-        <div className="p-4 border-t border-border text-xs text-muted flex items-center justify-between gap-2">
+        <div className="p-6 text-xs text-muted flex items-center justify-between gap-2">
           <a
             href={GITHUB_REPO}
             target="_blank"

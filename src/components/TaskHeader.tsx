@@ -3,6 +3,7 @@ import { TaskFilters } from "./TaskFilters";
 import { AppDrawer } from "@/components/AppDrawer";
 import { Menu } from "lucide-react";
 import type { TaskHeaderProps } from "@/types/taskHeader.types";
+import { APP_NAME } from "@/constants";
 
 export function TaskHeader({
   theme,
@@ -15,10 +16,10 @@ export function TaskHeader({
 
   return (
     <div className="px-4 pt-4 pb-3">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between pb-2">
         {/* Title */}
         <div>
-          <h1 className="text-lg font-semibold text-secondary">Tasks</h1>
+          <h1 className="text-xl font-bold text-secondary">{APP_NAME}</h1>
           <p className="text-xs text-muted">Manage your workflow</p>
         </div>
 

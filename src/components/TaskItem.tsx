@@ -38,17 +38,16 @@ export function TaskItem({
       onClick={() => setExtendCard((v) => !v)}
       className="
         relative rounded-3xl border border-border bg-surface
-        px-4 py-3 transition-all duration-200 active:scale-[0.98]
+        px-4 py-3 transition-all duration-200 active:scale-[0.99]
       "
     >
       {/* Task Card */}
       <div className="flex items-start justify-between gap-3">
-        {/* Left Side */}
         <div className="flex items-start gap-3 min-w-0 flex-1">
-          {/* STATUS INDICATOR */}
+          {/* Status Indicator */}
           <div
             className={`
-              mt-1 h-2.5 w-2.5 rounded-full shrink-0
+              mt-1.75 h-2.5 w-2.5 rounded-full shrink-0
               ${
                 task.status === "Pending"
                   ? "bg-yellow-400"
@@ -59,12 +58,11 @@ export function TaskItem({
             `}
           ></div>
 
-          {/* CONTENT */}
+          {/* Task Title */}
           <div className="min-w-0">
             <div
               className={`
-                text-sm font-semibold leading-snug
-
+                text-[16px] leading-snug
                 ${
                   task.status === "Completed"
                     ? "text-muted line-through opacity-70"
@@ -75,8 +73,9 @@ export function TaskItem({
               {task.title}
             </div>
 
+            {/* Task Description */}
             {task.description && (
-              <div className="mt-1 text-xs leading-relaxed text-muted">
+              <div className="mt-1 text-sm leading-snug text-muted">
                 {task.description}
               </div>
             )}
@@ -91,11 +90,11 @@ export function TaskItem({
 
       {/* Action Buttons */}
       <div
-        className={`flex justify-end gap-2 overflow-hidden transition-all duration-200 ease-out mt-2 ${
+        className={`flex justify-end gap-2 overflow-hidden transition-all duration-300 ease-out mt-2 ${
           extendCard ? "max-h-12 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex gap-2">
+        <div className="flex gap-4">
           {/* Delete Task */}
           <button
             onClick={(e) => {

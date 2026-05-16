@@ -4,7 +4,7 @@ import type { Theme, UseTheme } from "@/types/useTheme.types";
 export function useTheme(): UseTheme {
   // Initialize theme state
   const [theme, setTheme] = useState<Theme>(() => {
-    return (localStorage.getItem("theme") as Theme) || "dark";
+    return (localStorage.getItem("theme") as Theme) || "light";
   });
 
   // Update document's class
