@@ -1,73 +1,196 @@
-# React + TypeScript + Vite
+# Tasks - Manage Your Workflow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, modern, privacy-focused task management app built with React, TypeScript, TailwindCSS, and Capacitor.
 
-Currently, two official plugins are available:
+Tasks helps you quickly capture, organize, and track your daily work without ads, accounts, or data collection.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✅ Add, edit, and delete tasks
+- 🔄 Update task status
 
-## Expanding the ESLint configuration
+  - Pending
+  - In Progress
+  - Completed
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📂 Expandable completed tasks drawer
+- 🎨 Dark / Light theme support
+- 📱 Mobile-first responsive UI
+- ⚡ Smooth animations and interactions
+- 💾 Local storage persistence
+- 🔒 Privacy focused
+  - No tracking
+  - No analytics
+  - No third-party servers
+  - All data stays on your device
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React
+- TypeScript
+- TailwindCSS
+- Vite
+- Capacitor
+- Lucide Icons
+
+# 🚀 Installation
+
+## 📱 Download Mobile App
+
+The Android-ready version of the app is available in the `android` branch.
+
+👉 Android branch: https://github.com/AnwarHosenDev/tasks/tree/android
+
+---
+
+## 💻 Clone Repository (Web Version)
+
+The `main` branch contains the web version of the app only.
+
+### Clone the repository
+
+```bash
+git clone https://github.com/AnwarHosenDev/tasks.git
+cd tasks
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### Run development server
+
+```bash
+npm run dev
+```
+
+---
+
+# 👨‍💻 Developer Section
+
+## Run Production Build
+
+```bash
+npm run build
+```
+
+---
+
+## Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## Android Development (Capacitor)
+
+### Sync Capacitor
+
+```bash
+npx cap sync
+```
+
+### Open Android Studio
+
+```bash
+npx cap open android
+```
+
+Then build APK from Android Studio.
+
+---
+
+## Project Structure
+
+```txt
+src/
+├── components/
+├── hooks/
+├── types/
+├── utils/
+└── App.tsx
+```
+
+---
+
+## PWA Support
+
+Tasks is designed to work as:
+
+- Web App
+- Progressive Web App (PWA)
+- Android App via Capacitor
+
+---
+
+# 🔐 Privacy
+
+Tasks does not collect, store, or transmit user data.
+
+All task data is stored locally on your device using local storage.
+
+No:
+
+- ads
+- tracking
+- analytics
+- external APIs
+- cloud sync
+
+---
+
+# 🧠 Why I Built This
+
+I built Tasks primarily for my own everyday use:
+
+- quick task capture
+- minimal distractions
+- lightweight experience
+
+Then decided to share it publicly in case others find it useful too.
+
+---
+
+# 💡 Future Improvements
+
+Planned ideas:
+
+- Swipe gestures
+- Undo snackbar
+- Drag & drop reorder
+- Offline-first database
+- Native haptics
+- Better animations
+
+---
+
+# 🤝 Feedback
+
+If you find bugs or have suggestions, feel free to open an issue or leave feedback.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+---
+
+# 👋 Developer
+
+Built with ❤️ by Anwar
+
+- GitHub: https://github.com/AnwarHosenDev
+- Facebook: https://facebook.com/AnwarHosenDev
+
+If you find the project useful, feel free to give feedback or contribute.
