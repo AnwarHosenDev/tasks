@@ -5,7 +5,11 @@ export function ToggleTheme({ theme, toggleTheme }: UseTheme) {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-8 h-8 inline-flex items-center justify-center rounded-full bg-primary text-secondary transition-colors duration-300 shadow-md hover:shadow-lg cursor-pointer"
+      className="
+        relative w-8 h-8 inline-flex items-center justify-center 
+        rounded-full bg-primary text-secondary 
+        transition-colors duration-300 shadow-md hover:shadow-lg
+      "
       title="Theme"
     >
       <div className="relative w-5 h-5">
