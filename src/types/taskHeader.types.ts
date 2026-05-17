@@ -6,5 +6,5 @@ export interface TaskHeaderProps {
   toggleTheme: () => void;
   filters: TaskFilter[];
   activeFilter: TaskFilter;
-  setFilter: (f: TaskFilter) => void;
+  setFilter: (filter: TaskFilter) => void;
 }

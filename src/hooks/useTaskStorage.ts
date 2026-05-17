@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { TaskType } from "@/types/task.types";
 
-const STORAGE_KEY = "tasks_v1";
+const STORAGE_KEY = "tasks_v2";
 
 export function useTaskStorage() {
   const [tasks, setTasks] = useState<TaskType[]>([]);
@@ -21,25 +21,29 @@ export function useTaskStorage() {
   const addTask = (title: string, description: string) => {
     setTasks((prev) => [
       {
-        id: Date.now(),
+        id: crypto.randomUUID(),
         title,
         description,
         status: "Pending",
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
       },
       ...prev,
     ]);
   };
 
   // Delete a specific task with id
-  const deleteTask = (id: number) => {
+  const deleteTask = (id: string) => {
     setTasks((prev) => prev.filter((task) => task.id !== id));
   };
 
   // Update a task with given id and values
-  const editTask = (id: number, title: string, description: string) => {
+  const editTask = (id: string, title: string, description: string) => {
     setTasks((prev) =>
       prev.map((task) =>
-        task.id === id ? { ...task, title, description } : task,
+        task.id === id
+          ? { ...task, title, description, updatedAt: Date.now() }
+          : task,
       ),
     );
   };

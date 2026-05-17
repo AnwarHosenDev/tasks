@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Drawer } from "@/components/Drawer";
-import type { TaskInputProps } from "@/types/task.types";
+import type { TaskInputProps } from "@/types/taskInput.types";
 
 export function TaskInput({
   openInputCard,

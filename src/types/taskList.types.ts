@@ -1,8 +1,5 @@
-import type { TaskType } from "./task.types";
+import type { TaskActions, TaskType } from "./task.types";
 
-export interface TaskListProps {
+export interface TaskListProps extends TaskActions {
   tasks: TaskType[];
-  onUpdateStatus: any;
-  onDelete: (id: number) => void;
-  onEdit: (task: TaskType) => void;
 }

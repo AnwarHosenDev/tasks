@@ -58,7 +58,7 @@ export default function TaskBoard() {
 
   // Clear Completed Tasks
   const clearCompleted = () => {
-    completedTasks.forEach((t) => deleteTask(t.id));
+    completedTasks.forEach((task) => deleteTask(task.id));
   };
 
   return (
