@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { StatusConfig, TaskItemProps } from "@/types/task.types";
 import { Play, Check, RotateCcw, Trash, Pencil } from "lucide-react";
+import type { StatusConfig, TaskItemProps } from "@/types/taskItem.types";
 
 const statusConfig: StatusConfig = {
   Pending: {

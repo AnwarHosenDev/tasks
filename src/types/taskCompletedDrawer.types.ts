@@ -1,11 +1,8 @@
-import type { TaskType } from "./task.types";
+import type { TaskActions, TaskType } from "./task.types";
 
-export interface TaskCompletedDrawerProps {
+export interface TaskCompletedDrawerProps extends TaskActions {
   completedTasks: TaskType[];
   show: boolean;
-  setShow: (v: boolean) => void;
+  setShow: (value: boolean) => void;
   onClear: () => void;
-  onUpdateStatus: any;
-  onDelete: (id: number) => void;
-  onEdit: (task: TaskType) => void;
 }
