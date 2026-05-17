@@ -1,6 +1,6 @@
 # Tasks - Manage Your Workflow
 
-A simple, modern, privacy-focused task management app built with React, TypeScript, TailwindCSS, and Capacitor.
+A modern, privacy-focused task management app built with React, TypeScript, TailwindCSS, and Capacitor.
 
 Tasks helps you quickly capture, organize, and track your daily work without ads, accounts, or data collection.
 
@@ -79,15 +79,11 @@ npm run dev
 npm run build
 ```
 
----
-
 ## Preview Production Build
 
 ```bash
 npm run preview
 ```
-
----
 
 ## Android Development (Capacitor)
 
@@ -107,19 +103,6 @@ Then build APK from Android Studio.
 
 ---
 
-## Project Structure
-
-```txt
-src/
-├── components/
-├── hooks/
-├── types/
-├── utils/
-└── App.tsx
-```
-
----
-
 ## 🛠 Tech Stack
 
 - React
@@ -128,10 +111,6 @@ src/
 - Vite
 - Capacitor
 - Lucide Icons
-
-# 🚀 Installation
-
----
 
 ## PWA Support
 
@@ -188,17 +167,7 @@ Planned ideas:
 
 If you find bugs or have suggestions, feel free to open an issue or leave feedback.
 
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
-
----
-
-# 👋 Developer
+# 👋 Author
 
 Built with ❤️ by Anwar
 
