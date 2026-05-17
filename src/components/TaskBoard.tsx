@@ -73,7 +73,7 @@ export default function TaskBoard() {
       {/* Floating Action Button */}
       <button
         onClick={() => setOpenInput(true)}
-        className="absolute bottom-13 right-0 left-0 mx-auto 
+        className="absolute bottom-16 right-0 left-0 mx-auto 
           h-12 w-12 rounded-full bg-secondary text-primary 
           flex items-center justify-center shadow-lg active:scale-90 transition
         "

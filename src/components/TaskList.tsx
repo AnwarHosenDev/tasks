@@ -24,7 +24,7 @@ export function TaskList({
     </div>
   ) : (
     // Empty list
-    <div className="text-muted flex flex-1 flex-col items-center justify-center gap-1 -mt-32 pointer-events-none">
+    <div className="text-muted flex flex-1 flex-col items-center justify-center gap-1 -mt-30 pointer-events-none">
       <ClipboardList size={32} />
       <div className="text-sm font-semibold">No task available!</div>
       <div className="max-w-xs text-xs leading-relaxed">
