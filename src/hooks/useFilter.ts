@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 
-import type { UseTaskProps } from "@/types/useTasks.types";
+import type { UseFilterProps } from "@/types/useFilter.types";
 
-export function useTasks({ tasks, activeFilter }: UseTaskProps) {
+export function useFilter({ tasks, activeFilter }: UseFilterProps) {
   // Filter tasks by selected filter
   const filteredTasks = useMemo(() => {
     if (activeFilter === "All") return tasks;

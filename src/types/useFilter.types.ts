@@ -1,6 +1,6 @@
 import type { TaskType, TaskFilter } from "./task.types";
 
-export type UseTaskProps = {
+export type UseFilterProps = {
   tasks: TaskType[];
   activeFilter: TaskFilter;
 };

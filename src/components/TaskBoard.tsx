@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 
 import { useTheme } from "@/hooks/useTheme";
 import { useTaskStorage } from "@/hooks/useTaskStorage";
-import { useTasks } from "@/hooks/useTasks";
+import { useFilter } from "@/hooks/useFilter";
 
 import { TaskHeader } from "./TaskHeader";
 import { TaskList } from "./TaskList";
@@ -32,7 +32,7 @@ export default function TaskBoard() {
 
   const { theme, toggleTheme } = useTheme();
 
-  const { activeTasks, completedTasks } = useTasks({
+  const { activeTasks, completedTasks } = useFilter({
     tasks,
     activeFilter: filter,
   });
