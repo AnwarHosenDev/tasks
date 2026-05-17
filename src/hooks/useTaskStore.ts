@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import type { TaskType, TaskStatus } from "@/types/task.types";
 import type { TaskRepository } from "@/repositories/task.repository";
 
-export function useTaskStorage(repository: TaskRepository) {
+export function useTaskStore(repository: TaskRepository) {
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [loading, setLoading] = useState(true);
 

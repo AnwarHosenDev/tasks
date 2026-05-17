@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 
 import { useTheme } from "@/hooks/useTheme";
-import { useTaskStorage } from "@/hooks/useTaskStorage";
+import { useTaskStore } from "@/hooks/useTaskStore";
 import { useFilter } from "@/hooks/useFilter";
 
 import { TaskHeader } from "./TaskHeader";
@@ -23,7 +23,7 @@ export default function TaskBoard() {
     editTask,
     updateTaskStatus,
     clearCompleted,
-  } = useTaskStorage(taskRepository);
+  } = useTaskStore(taskRepository);
 
   const [filter, setFilter] = useState<TaskFilter>("All");
   const [openInput, setOpenInput] = useState(false);
