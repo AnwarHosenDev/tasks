@@ -15,10 +15,7 @@ export function TaskInput({
   // Title input element reference
   const titleFieldRef = useRef<HTMLInputElement | null>(null);
 
-  /**
-   * Effect to set the title and description when editing a task
-   * or when the input card is opened
-   */
+  // Set the title and description when editing a task
   useEffect(() => {
     if (editingTask) {
       setTitle(editingTask.title);
@@ -27,10 +24,14 @@ export function TaskInput({
       setTitle("");
       setDesc("");
     }
+  }, [editingTask]);
 
-    // Focus on title field
-    titleFieldRef.current?.focus();
-  }, [editingTask, openInputCard]);
+  // Focus on title field only on creating task (not editing)
+  useEffect(() => {
+    if (openInputCard && !editingTask) {
+      titleFieldRef.current?.focus();
+    }
+  }, [openInputCard]);
 
   // Function to handle the submission of the task
   const handleSubmit = () => {
