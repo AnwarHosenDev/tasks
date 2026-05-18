@@ -1,3 +1,3 @@
-import { LocalTaskRepository } from "./local-task.repository";
+import { DexieTaskRepository } from "@/repositories/dexie-task.repository";
 
-export const taskRepository = new LocalTaskRepository();
+export const taskRepository = new DexieTaskRepository();
